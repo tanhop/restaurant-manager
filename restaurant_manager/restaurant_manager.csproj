@@ -46,7 +46,6 @@
     <Compile Include="BanAn.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="nhanVien\Daubep.cs" />
-    <Compile Include="nhanVien\MonAn.cs" />
     <Compile Include="nhanVien\NhanVien.cs" />
     <Compile Include="nhanVien\Phucvu.cs" />
     <Compile Include="nhanVien\Program.cs" />
