@@ -8,5 +8,6 @@ namespace restaurant_manager
 {
     class Menu
     {
+
     }
 }

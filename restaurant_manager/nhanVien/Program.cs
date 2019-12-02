@@ -10,6 +10,10 @@ namespace restaurant_manager
     {
         static void Main(string[] args)
         {
+            ThucUong a = new ThucUong();
+            a.nhap();
+            a.xuat();
+            Console.ReadKey();
         }
     }
 }
