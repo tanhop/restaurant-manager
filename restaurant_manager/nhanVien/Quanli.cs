@@ -30,7 +30,39 @@ namespace restaurant_manager
             Console.WriteLine("Nhap ten nha hang: ");
             NameNhaHang = Console.ReadLine();
             Console.Write("Nhap so luong dau bep: ");
-           
+            int soDB = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhap so luong ke toan: ");
+            int soKT = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhap so luong tiep tan: ");
+            int soTT = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhap so luong phuc vu: ");
+            int soPV = Convert.ToInt32(Console.ReadLine());
+
+            for( int i =0; i< soDB; i++)
+            {
+                Daubep db = new Daubep();
+                db.nhap();
+                Daubep.Add(db);
+            }
+            for (int i = 0; i < soKT; i++)
+            {
+                NVketoan kt = new NVketoan();
+                kt.nhap();
+                Ketoan.Add(kt);
+            }
+            for (int i = 0; i < soTT; i++)
+            {
+                NVtieptan tt = new NVtieptan();
+                tt.nhap();
+                Tieptan.Add(tt);
+            }
+            for (int i = 0; i < soPV; i++)
+            {
+                Phucvu pv = new Phucvu();
+                pv.nhap();
+                Phucvu.Add(pv);
+            }
+
         }
     }
 }

@@ -1,0 +1,158 @@
+﻿1
+Tra
+tra xanh vai nha dam
+49000
+2
+Tra
+tra dao
+49000
+3
+Tra
+tra sua thai
+45000
+4
+Tra
+tra xanh bac ha mat ong
+45000
+5
+Tra
+tra olong
+45000
+6
+Tra
+tra bong cuc nong - da
+29000
+7
+Tra
+tra sen nong- da
+15000
+8
+Tra
+hong tra
+45000
+9
+Nuoc_ep
+coc oi
+45000
+10
+Nuoc_ep
+can tay ca rot
+49000
+11
+Nuoc_ep
+rau ma
+45000
+12
+Nuoc_ep
+cam tao mat ong
+55000
+13
+Nuoc_ep
+buoi
+45000
+14
+Nuoc_ep
+thom
+45000
+15
+Nuoc_ep
+dua hau
+45000
+16
+Nuoc_ep
+dua tuoi
+39000
+17
+Nuoc_ep
+chanh day
+35000
+18
+Sinh_to
+dua
+65000
+19
+Sinh_to
+bo
+45000
+20
+Sinh_to
+mang cau
+45000
+21
+Sinh_to
+sapoche
+45000
+22
+Sinh_to
+thom
+45000
+23
+Sinh_to
+xoai
+45000
+24
+Sinh_to
+du du
+45000
+25
+Thuc_uong_Khac
+nuoc suoi
+25000
+26
+Thuc_uong_Khac
+cafe sua nong
+35000
+27
+Thuc_uong_Khac
+cafe sua da
+39000
+28
+Thuc_uong_Khac
+cafe den
+30000
+29
+Thuc_uong_Khac
+coca cola
+32000
+30
+Thuc_uong_Khac
+sprite
+32000
+31
+Thuc_uong_Khac
+soda
+25000
+32
+Thuc_uong_Khac
+heineken
+39000
+33
+Thuc_uong_Khac
+tiger
+35000
+34
+Thuc_uong_Khac
+strongBow
+39000
+35
+Thuc_uong_Khac
+sapporo
+39000
+36
+Thuc_uong_Khac
+333
+29000
+37
+Thuc_uong_Khac
+saigonBeer
+39000
+38
+Thuc_uong_Khac
+Schumucker
+119000
+39
+Thuc_uong_Khac
+Hoegaarden
+89000
+
+

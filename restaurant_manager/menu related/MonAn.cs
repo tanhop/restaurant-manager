@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace restaurant_manager
 {
-    enum eLoaiMon { khai_vi, goi, cuon, bun_mi_nuoc, bun_mi_kho, pho_mien, mam, com_xoi, rau_nam_dau_hu, lau }
+    enum eLoaiMon { Khai_vi, Goi, Cuon, Bun_mi_nuoc, Kho, Mien_mi, Mam, Com_xoi, Rau_nam_Dau_hu, Ne , Tiem , Lau }
     class MonAn : FoodnDrinks
     {
         private int maMonAn;

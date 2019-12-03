@@ -64,6 +64,10 @@
     <Content Include="MonAn.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="ThucUong.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Other\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
