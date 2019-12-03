@@ -1,0 +1,54 @@
+﻿1
+khai vi
+bach tuoc rang trung muoi
+85000
+2 
+khai vi
+canh ga chien nuoc mam
+85000
+3
+khai vi
+bo luc lac
+115000
+4 
+khai vi
+cha gio cua
+85000
+5
+khai vi
+com chay cha ca
+89000
+6
+khai vi
+dau hu trung mo hanh cha bong
+59000
+7
+khai vi
+luon ca hoi nuong muoi ot
+95000
+8
+khai vi
+cua lot rang toi
+135000
+9
+khai vi
+cua lot trung muoi
+145000
+10
+goi 
+goi mien hai san chua cay
+99000
+11
+goi 
+goi rau muong non thit be
+95000
+12
+goi
+goi sua nha trang
+85000
+13
+goi
+goi xoai ca com chien gion
+89000
+14
+cuon 

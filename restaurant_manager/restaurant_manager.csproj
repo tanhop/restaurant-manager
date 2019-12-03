@@ -44,20 +44,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BanAn.cs" />
-    <Compile Include="Menu.cs" />
-    <Compile Include="MonAn.cs" />
+    <Compile Include="menu related\FoodnDrinks.cs" />
+    <Compile Include="menu related\Menu.cs" />
+    <Compile Include="menu related\MonAn.cs" />
     <Compile Include="nhanVien\Daubep.cs" />
     <Compile Include="nhanVien\NhanVien.cs" />
     <Compile Include="nhanVien\NVketoan.cs" />
     <Compile Include="nhanVien\NVtieptan.cs" />
     <Compile Include="nhanVien\Phucvu.cs" />
-    <Compile Include="nhanVien\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="nhanVien\Quanli.cs" />
-    <Compile Include="ThucUong.cs" />
+    <Compile Include="menu related\ThucUong.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MonAn.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace restaurant_manager
 {
     class Program
     {
-        static void Main(string[] args)
+            static void Main(string[] args)
         {
-            ThucUong a = new ThucUong();
-            a.nhap();
-            a.xuat();
+            Menu.nhap();
+            Menu.xuat();
             Console.ReadKey();
         }
+       
     }
 }

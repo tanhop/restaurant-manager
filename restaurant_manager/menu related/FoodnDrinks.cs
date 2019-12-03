@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace restaurant_manager
 {
-    class BanAn
+    public interface FoodnDrinks
     {
+        int iMa { get; set; }
+        string sTen { get; set; }
+        double dGia { get; set; }
+
+        void nhap();
+        void xuat();
         
     }
 }
