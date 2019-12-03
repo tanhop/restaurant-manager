@@ -49,6 +49,8 @@
     <Compile Include="menu related\MonAn.cs" />
     <Compile Include="nhanVien\Daubep.cs" />
     <Compile Include="nhanVien\NhanVien.cs" />
+    <Compile Include="nhanVien\NVketoan.cs" />
+    <Compile Include="nhanVien\NVtieptan.cs" />
     <Compile Include="nhanVien\Phucvu.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Program.cs" />
@@ -63,6 +65,10 @@
     <Content Include="MonAn.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="ThucUong.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Other\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
