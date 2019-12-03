@@ -13,11 +13,13 @@ namespace restaurant_manager
         private string tenMonAn;
         private double giaMonAn;
         private eLoaiMon loaiMon;
+        private int soLuong;
 
         public int iMa { get => maMonAn; set => maMonAn = value; }
         public string sTen { get => tenMonAn; set => tenMonAn = value; }
         public double dGia { get => giaMonAn; set => giaMonAn = value; }
         public eLoaiMon loaiMonAn { get => loaiMon; set => loaiMon = value; }
+        public int luong { get => soLuong; set => soLuong = value; }
         public MonAn() { }
         public MonAn(int maMon, eLoaiMon loai, string tenMon, double giaMon)
         {
@@ -25,7 +27,6 @@ namespace restaurant_manager
             loaiMon = loai;
             sTen = tenMon;
             dGia = giaMon;
-            
         }
 
         public void nhap()

@@ -13,12 +13,13 @@ namespace restaurant_manager
         private eLoaiNuoc loaiNuoc;
         private string tenThucUong;
         private double giaThucUong;
+        private int soLuong;
 
         public int iMa { get => maThucUong; set => maThucUong = value; }
         public eLoaiNuoc loai { get => loaiNuoc; set => loaiNuoc = value; }
         public string sTen { get => tenThucUong; set => tenThucUong = value; }
         public double dGia { get => giaThucUong; set => giaThucUong = value; }
-
+        public int luong { get => soLuong; set => soLuong = value; }
         public ThucUong() { }
         public ThucUong(int ma, eLoaiNuoc loai, string ten, double gia)
         {

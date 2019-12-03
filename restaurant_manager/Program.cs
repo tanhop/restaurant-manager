@@ -13,6 +13,9 @@ namespace restaurant_manager
         {
             Menu.nhap();
             Menu.xuat();
+            Order a = new Order();
+            a.nhap();
+            a.xuat();
             Console.ReadKey();
         }
        
