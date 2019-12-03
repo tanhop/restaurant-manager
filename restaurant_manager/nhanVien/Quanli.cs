@@ -30,7 +30,7 @@ namespace restaurant_manager
             Console.WriteLine("Nhap ten nha hang: ");
             NameNhaHang = Console.ReadLine();
             Console.Write("Nhap so luong dau bep: ");
-            int soDB=
+           
         }
     }
 }
