@@ -11,22 +11,22 @@ namespace restaurant_manager
     {
         private int maMonAn;
         private string tenMonAn;
-        private double giaMonAn;
+        private long giaMonAn;
         private eLoaiMon loaiMon;
         private int soLuong;
 
         public int iMa { get => maMonAn; set => maMonAn = value; }
         public string sTen { get => tenMonAn; set => tenMonAn = value; }
-        public double dGia { get => giaMonAn; set => giaMonAn = value; }
+        public long Gia { get => giaMonAn; set => giaMonAn = value; }
         public eLoaiMon loaiMonAn { get => loaiMon; set => loaiMon = value; }
         public int luong { get => soLuong; set => soLuong = value; }
         public MonAn() { }
-        public MonAn(int maMon, eLoaiMon loai, string tenMon, double giaMon)
+        public MonAn(int maMon, eLoaiMon loai, string tenMon, long giaMon)
         {
             iMa = maMon;
             loaiMon = loai;
             sTen = tenMon;
-            dGia = giaMon;
+            Gia = giaMon;
         }
 
         public void nhap()
@@ -41,23 +41,23 @@ namespace restaurant_manager
             Console.WriteLine("nhap ten mon an: ");
             tenMonAn = Console.ReadLine();
             Console.WriteLine("nhap gia mon an: ");
-            giaMonAn = Convert.ToDouble(Console.ReadLine());
+            giaMonAn = Convert.ToInt64(Console.ReadLine());
         }
 
         public void xuat()
         {
-            Console.WriteLine("ma mon an: "+ maMonAn);
-            Console.WriteLine("loai mon an: "+ loaiMon);
-            Console.WriteLine("ten mon an: "+ tenMonAn);
-            Console.WriteLine("gia mon an: "+ giaMonAn);
+            Console.WriteLine("mã món ăn: "+ maMonAn);
+            Console.WriteLine("loại món ăn "+ loaiMon);
+            Console.WriteLine("tên món ăn: "+ tenMonAn);
+            Console.WriteLine("giá món ăn: "+ giaMonAn);
         }
         public void xuat(eLoaiMon loai)
         {
             if(loaiMon == loai)
             {
-                Console.WriteLine("ma mon an: "+ maMonAn);
-                Console.WriteLine("ten mon an: "+ tenMonAn);
-                Console.WriteLine("gia mon an: "+ giaMonAn);
+                Console.WriteLine("mã món ăn: "+ maMonAn);
+                Console.WriteLine("tên món ăn: "+ tenMonAn);
+                Console.WriteLine("giá món ăn: "+ giaMonAn);
             }
         }
 

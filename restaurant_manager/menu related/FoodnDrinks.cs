@@ -10,7 +10,7 @@ namespace restaurant_manager
     {
         int iMa { get; set; }
         string sTen { get; set; }
-        double dGia { get; set; }
+        long Gia { get; set; }
 
         void nhap();
         void xuat();

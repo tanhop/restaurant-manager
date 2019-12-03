@@ -11,9 +11,12 @@ namespace restaurant_manager
     {
             static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.InputEncoding = Encoding.Unicode;
             Menu.docDataThucUong();
             Menu.docDataMonAn();
             Menu.xuat();
+            Console.ReadKey();
         }
        
     }

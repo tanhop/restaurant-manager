@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="BanAn.cs" />
     <Compile Include="menu related\FoodnDrinks.cs" />
-    <Compile Include="menu related\Menu.cs" />
+    <Compile Include="menu related\Menu.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="menu related\MonAn.cs" />
     <Compile Include="nhanVien\Daubep.cs" />
     <Compile Include="nhanVien\NhanVien.cs" />
@@ -62,10 +64,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="menu related\MonAn.txt">
+    <Content Include="MonAn.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="menu related\ThucUong.txt" />
+    <Content Include="ThucUong.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Other\" />

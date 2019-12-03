@@ -66,17 +66,17 @@ namespace restaurant_manager
         {
             double tien = 0;
             for (int i = 0; i < lMon.Count; i++)
-                tien += lMon[i].dGia * lMon[i].luong;
+                tien += lMon[i].Gia * lMon[i].luong;
             for (int i = 0; i < lNuoc.Count; i++)
-                tien += lNuoc[i].dGia * lNuoc[i].luong;
+                tien += lNuoc[i].Gia * lNuoc[i].luong;
             return tien;
         }
         public void xuat()
         {
             foreach (MonAn a in lMon)
-                Console.WriteLine("Mat hang: " + a.sTen + "    Don Gia: " + a.dGia + "   So luong: " + a.luong + "   Thanh tien: " + a.dGia * a.luong);
+                Console.WriteLine("Mat hang: " + a.sTen + "    Don Gia: " + a.Gia + "   So luong: " + a.luong + "   Thanh tien: " + a.Gia * a.luong);
             foreach (ThucUong b in lNuoc)
-                Console.WriteLine("Mat hang: "+b.sTen + "    Don Gia: " + b.dGia + "   So luong: " + b.luong + "   Thanh tien: " + b.dGia * b.luong);
+                Console.WriteLine("Mat hang: "+b.sTen + "    Don Gia: " + b.Gia + "   So luong: " + b.luong + "   Thanh tien: " + b.Gia * b.luong);
             Console.WriteLine("tong tien: " + tinhTien());
         }
     }

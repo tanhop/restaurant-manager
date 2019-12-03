@@ -12,16 +12,16 @@ namespace restaurant_manager
         private int maThucUong;
         private eLoaiNuoc loaiNuoc;
         private string tenThucUong;
-        private double giaThucUong;
+        private long giaThucUong;
         private int soLuong;
 
         public int iMa { get => maThucUong; set => maThucUong = value; }
         public eLoaiNuoc loai { get => loaiNuoc; set => loaiNuoc = value; }
         public string sTen { get => tenThucUong; set => tenThucUong = value; }
-        public double dGia { get => giaThucUong; set => giaThucUong = value; }
+        public long Gia { get => giaThucUong; set => giaThucUong = value; }
         public int luong { get => soLuong; set => soLuong = value; }
         public ThucUong() { }
-        public ThucUong(int ma, eLoaiNuoc loai, string ten, double gia)
+        public ThucUong(int ma, eLoaiNuoc loai, string ten, long gia)
         {
             maThucUong = ma;
             loaiNuoc = loai;
@@ -43,24 +43,24 @@ namespace restaurant_manager
             Console.WriteLine("nhap ten thuc uong: ");
             tenThucUong = Console.ReadLine();
             Console.WriteLine("nhap gia thuc uong: ");
-            giaThucUong = Convert.ToDouble(Console.ReadLine());
+            giaThucUong = Convert.ToInt64(Console.ReadLine());
         }
 
         public void xuat()
         {
-            Console.WriteLine("ma thuc uong: " + maThucUong);
-            Console.WriteLine("ten thuc uong: " + tenThucUong);
-            Console.WriteLine("loai thuc uong: " + loai);
-            Console.WriteLine("gia thuc uong: " + giaThucUong);
+            Console.WriteLine("mã thức uống: " + maThucUong);
+            Console.WriteLine("tên thức uống: " + tenThucUong);
+            Console.WriteLine("loại thức uống: " + loai);
+            Console.WriteLine("giá thức uống: " + giaThucUong);
         }
 
         public void xuat(eLoaiNuoc loai)
         {
             if (loaiNuoc == loai)
             {
-                Console.WriteLine("ma thuc uong: "+ maThucUong);
-                Console.WriteLine("ten thuc uong: "+ tenThucUong);
-                Console.WriteLine("gia thuc uong: "+ giaThucUong);
+                Console.WriteLine("mã thức uống: "+ maThucUong);
+                Console.WriteLine("tên thức uống: "+ tenThucUong);
+                Console.WriteLine("giá thức uống: "+ giaThucUong);
             }
         }
     }

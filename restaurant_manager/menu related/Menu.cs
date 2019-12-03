@@ -18,18 +18,26 @@ namespace restaurant_manager
 
         public static void xuat()
         {
+            Console.WriteLine("=====MENU MÓN ĂN=====\n \n");
             foreach ( eLoaiMon loai in Enum.GetValues(typeof(eLoaiMon)))
             {
+                Console.WriteLine(loai + "\n");
                 for (int i = 0; i < lMonAn.Count; i++)
                     if (lMonAn[i].loaiMonAn == loai)
                         lMonAn[i].xuat(loai);
+                    
+                Console.WriteLine();
             }
+            Console.WriteLine();
 
+            Console.WriteLine("=====MENU THỨC UỐNG===== \n \n");
             foreach (eLoaiNuoc loai in Enum.GetValues(typeof(eLoaiNuoc)))
             {
+                Console.WriteLine(loai + "\n");
                 for (int i = 0; i < lThucUong.Count; i++)
                     if (lThucUong[i].loai == loai)
                         lThucUong[i].xuat(loai);
+                Console.WriteLine();
             }
         }
         public static void docDataMonAn()       //doc data tu file MonAn.txt
@@ -43,7 +51,7 @@ namespace restaurant_manager
                 a.iMa = Convert.ToInt32(line);
                 a.loaiMonAn = (eLoaiMon)Enum.Parse(typeof(eLoaiMon), sr.ReadLine());
                 a.sTen = sr.ReadLine();
-                a.dGia = Convert.ToDouble(sr.ReadLine());
+                a.Gia = Convert.ToInt64(sr.ReadLine());
                 lMonAn.Add(a);
             }
             sr.Close();
@@ -60,7 +68,7 @@ namespace restaurant_manager
                 a.iMa = Convert.ToInt32(line);
                 a.loai = (eLoaiNuoc)Enum.Parse(typeof(eLoaiNuoc), sr.ReadLine());
                 a.sTen = sr.ReadLine();
-                a.dGia = Convert.ToDouble(sr.ReadLine());
+                a.Gia = Convert.ToInt64(sr.ReadLine());
                 lThucUong.Add(a);
             }
             sr.Close();
