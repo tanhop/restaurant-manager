@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace restaurant_manager
 {
-    enum eLoaiNuoc { Tra, Nuoc_ep, Sinh_to, Thuc_uong_Khac}
+    enum eLoaiNuoc { Trà, Nước_ép, Sinh_tố, Thức_uống_khác }
     class ThucUong: FoodnDrinks
     {
         private int maThucUong;

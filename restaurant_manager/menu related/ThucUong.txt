@@ -1,0 +1,158 @@
+﻿1
+Trà
+trà xanh vải nha đam
+49000
+2
+Trà
+trà đào
+49000
+3
+Trà
+trà sữa thái
+45000
+4
+Trà
+trà xanh bạc hà mật ong
+45000
+5
+Trà
+trà olong
+45000
+6
+Trà
+trà bông cúc
+29000
+7
+Trà
+trà sen
+15000
+8
+Trà
+hồng trà
+45000
+9
+Nước_Ép
+cóc ổi
+45000
+10
+Nước_Ép
+cần tây cà rốt
+49000
+11
+Nước_Ép
+rau má
+45000
+12
+Nước_Ép
+cam táo mật ong
+55000
+13
+Nước_Ép
+bưởi
+45000
+14
+Nước_Ép
+thơm
+45000
+15
+Nước_Ép
+dưa hấu
+45000
+16
+Nước_Ép
+dừa tươi
+39000
+17
+Nước_Ép
+chanh dây
+35000
+18
+Sinh_Tố
+dưa
+65000
+19
+Sinh_Tố
+bơ
+45000
+20
+Sinh_Tố
+mảng cầu
+45000
+21
+Sinh_Tố
+sapoche
+45000
+22
+Sinh_Tố
+thơm
+45000
+23
+Sinh_Tố
+xoài
+45000
+24
+Sinh_Tố
+đu đủ
+45000
+25
+Thức_uống_khác
+nước suối
+25000
+26
+Thức_uống_khác
+cafe sữa nóng
+35000
+27
+Thức_uống_khác
+cafe sữa đá
+39000
+28
+Thức_uống_khác
+cafe đen
+30000
+29
+Thức_uống_khác
+coca cola
+32000
+30
+Thức_uống_khác
+sprite
+32000
+31
+Thức_uống_khác
+soda
+25000
+32
+Thức_uống_khác
+heineken
+39000
+33
+Thức_uống_khác
+tiger
+35000
+34
+Thức_uống_khác
+strongBow
+39000
+35
+Thức_uống_khác
+sapporo
+39000
+36
+Thức_uống_khác
+333
+29000
+37
+Thức_uống_khác
+saigonBeer
+39000
+38
+Thức_uống_khác
+Schumucker
+119000
+39
+Thức_uống_khác
+Hoegaarden
+89000
+
+

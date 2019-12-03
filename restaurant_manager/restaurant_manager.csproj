@@ -62,10 +62,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MonAn.txt">
+    <Content Include="menu related\MonAn.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ThucUong.txt" />
+    <Content Include="menu related\ThucUong.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Other\" />

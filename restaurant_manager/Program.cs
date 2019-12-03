@@ -11,12 +11,9 @@ namespace restaurant_manager
     {
             static void Main(string[] args)
         {
-            Menu.nhap();
+            Menu.docDataThucUong();
+            Menu.docDataMonAn();
             Menu.xuat();
-            Order a = new Order();
-            a.nhap();
-            a.xuat();
-            Console.ReadKey();
         }
        
     }

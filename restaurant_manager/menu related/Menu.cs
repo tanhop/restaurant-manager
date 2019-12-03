@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace restaurant_manager
 {
@@ -15,29 +16,6 @@ namespace restaurant_manager
         public static List<ThucUong> dsThucUong { get => lThucUong; set => lThucUong = value; }
 
 
-        public static void nhap() 
-        {
-            lMonAn = new List<MonAn>();
-            lThucUong = new List<ThucUong>();
-            Console.WriteLine("nhap so mon an trong menu: ");
-            int nThucAn = Convert.ToInt32(Console.ReadLine());
-            for(int i = 0; i < nThucAn; i++)
-            {
-                MonAn mon = new MonAn();
-                mon.nhap();
-                lMonAn.Add(mon);
-            }
-
-
-            Console.WriteLine("nhap so thuc uong trong menu: ");
-            int nThucUong = Convert.ToInt32(Console.ReadLine());
-            for (int i =0;i<nThucUong;i++)
-            {
-                ThucUong uong = new ThucUong();
-                uong.nhap();
-                lThucUong.Add(uong);
-            }
-        }
         public static void xuat()
         {
             foreach ( eLoaiMon loai in Enum.GetValues(typeof(eLoaiMon)))
@@ -54,6 +32,38 @@ namespace restaurant_manager
                         lThucUong[i].xuat(loai);
             }
         }
-        
+        public static void docDataMonAn()       //doc data tu file MonAn.txt
+        {
+            lMonAn = new List<MonAn>();
+            StreamReader sr = new StreamReader("MonAn.txt");
+            string line;
+            while ((line = sr.ReadLine())!= null)
+            {
+                MonAn a = new MonAn();
+                a.iMa = Convert.ToInt32(line);
+                a.loaiMonAn = (eLoaiMon)Enum.Parse(typeof(eLoaiMon), sr.ReadLine());
+                a.sTen = sr.ReadLine();
+                a.dGia = Convert.ToDouble(sr.ReadLine());
+                lMonAn.Add(a);
+            }
+            sr.Close();
+        }
+
+        public static void docDataThucUong()        //doc data tu file ThucUong.txt
+        {
+            lThucUong = new List<ThucUong>();
+            StreamReader sr = new StreamReader("ThucUong.txt");
+            string line;
+            while ((line = sr.ReadLine()) != null)
+            {
+                ThucUong a = new ThucUong();
+                a.iMa = Convert.ToInt32(line);
+                a.loai = (eLoaiNuoc)Enum.Parse(typeof(eLoaiNuoc), sr.ReadLine());
+                a.sTen = sr.ReadLine();
+                a.dGia = Convert.ToDouble(sr.ReadLine());
+                lThucUong.Add(a);
+            }
+            sr.Close();
+        }
     }
 }

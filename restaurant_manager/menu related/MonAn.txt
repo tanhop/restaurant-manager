@@ -1,0 +1,220 @@
+﻿1
+Khai_vị
+bạch tuộc rang trứng muối
+85000
+2 
+Khai_vị
+cánh gà chiên nước mắm
+85000
+3
+Khai_vị
+bò lúc lắc
+115000
+4 
+Khai_vị
+chả giò cua
+85000
+5
+Khai_vị
+cơm cháy chả cá
+89000
+6
+Khai_vị
+đậu hũ mỡ hành chà bông
+59000
+7
+Khai_vị
+lườn cá hồi nướng muối ớt
+95000
+8
+Khai_vị
+cua lột rang tỏi
+135000
+9
+Khai_vị
+cua lột trứng muối
+145000
+10
+Gỏi
+gỏi miến hải sản chua cay
+99000
+11
+Gỏi
+gỏi rau muống non thịt bê
+95000
+12
+Gỏi
+gỏi sứa Nha Trang
+85000
+13
+Gỏi
+gỏi xoài cá cơm chiên giòn
+89000
+14
+Cuốn
+gỏi cuốn
+55000
+15
+Cuốn
+cuốn nem nướng Nha Trang
+55000
+16
+Bún_mì_nước
+mì hoành thánh tôm
+89000
+17
+Bún_mì_nước
+bún thái hải sản	
+79000
+18
+Bún_mì_nước
+phở bò
+79000
+19
+Bún_mì_nước
+bún bò Huế
+85000
+20
+Bún_mì_nước
+mì gà quay
+89000
+21
+Bún_mì_nước
+bánh canh tôm
+89000
+22
+Bún_mì_khô
+bún thịt xào sả
+89000
+23
+Bún_mì_khô
+bún chả giò
+85000
+24
+Bún_mì_khô
+bún thịt heo nướng mật
+79000
+25
+Bún_mì_khô
+mì gà quay
+89000
+26
+Miến_mì
+mì xào giòn thập cẩm
+125000
+27
+Miến_mì
+mì xào thập cẩm
+125000
+28
+Miến_mì
+mì xào giòn bò
+115000
+29
+Miến_mì
+mì xào tam tơ
+85000
+30
+Miến_mì
+miến cua lột tay cầm
+175000
+31
+Miến_mì
+miến xào cua
+115000
+32
+Mâm
+bún chả Hà Nội
+85000
+33
+Mâm
+bún đậu mắm tôm
+75000
+34
+Mâm
+bún đậu mắm tôm, chả cốm, giò luộc
+95000
+35
+Mâm
+bún nem nướng Nha Trang
+99000
+36
+Mâm
+bò lá lốt bánh hỏi
+95000
+37
+Mâm
+bánh hỏi thịt nướng
+89000
+38
+Mâm
+bánh hỏi nem nướng
+99000
+39
+Cơm_xôi
+cơm chiên hải sản đậu xanh
+85000
+40
+Cơm_xôi
+cơm chiên lườn cá hồi kim chi
+85000
+41
+Cơm_xôi
+cơm chiên mắm ruốc
+89000
+42
+Cơm_xôi
+cơm vàng giòn gà Hải Nam
+95000
+43
+Cơm_xôi
+cơm vàng giòn đùi gà quay
+95000
+44
+Cơm_xôi
+gà nướng xôi lá dứa
+195000
+45
+Rau_nấm_đậu_hũ
+rau muống xào tỏi
+39000
+46
+Rau_nấm_đậu_hũ
+mồng tơi xào tỏi
+39000
+47
+Rau_nấm_đậu_hũ
+đậu hũ rang trứng muối
+65000
+48
+Rau_nấm_đậu_hũ
+đậu hũ chiên & mắm tôm
+45000
+49
+Né
+bò Mỹ, pate, xúc xích, ốp la & phô mai
+115000
+50
+Tiềm
+gà tiềm bí đao đậu đỏ
+55000
+51
+Tiềm
+sườn non tiềm củ sen
+65000
+52
+Tiềm
+súp nấm cua đậu hũ non
+55000
+53
+Lẩu
+lẩu thái hải sản
+275000
+53
+Lẩu
+lẩu gà ớt hiểm
+295000
+
+
+
+
