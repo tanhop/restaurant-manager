@@ -20,6 +20,13 @@ namespace restaurant_manager
         public double dGia { get => giaThucUong; set => giaThucUong = value; }
 
         public ThucUong() { }
+        public ThucUong(int ma, eLoaiNuoc loai, string ten, double gia)
+        {
+            maThucUong = ma;
+            loaiNuoc = loai;
+            tenThucUong = ten;
+            giaThucUong = gia;
+        }
 
         ~ThucUong() { }
 
@@ -44,6 +51,16 @@ namespace restaurant_manager
             Console.WriteLine("ten thuc uong: " + tenThucUong);
             Console.WriteLine("loai thuc uong: " + loai);
             Console.WriteLine("gia thuc uong: " + giaThucUong);
+        }
+
+        public void xuat(eLoaiNuoc loai)
+        {
+            if (loaiNuoc == loai)
+            {
+                Console.WriteLine("ma thuc uong: "+ maThucUong);
+                Console.WriteLine("ten thuc uong: "+ tenThucUong);
+                Console.WriteLine("gia thuc uong: "+ giaThucUong);
+            }
         }
     }
 }

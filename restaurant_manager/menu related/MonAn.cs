@@ -19,9 +19,10 @@ namespace restaurant_manager
         public double dGia { get => giaMonAn; set => giaMonAn = value; }
         public eLoaiMon loaiMonAn { get => loaiMon; set => loaiMon = value; }
         public MonAn() { }
-        public MonAn(int maMon, string tenMon, double giaMon)
+        public MonAn(int maMon, eLoaiMon loai, string tenMon, double giaMon)
         {
             iMa = maMon;
+            loaiMon = loai;
             sTen = tenMon;
             dGia = giaMon;
             
@@ -44,11 +45,20 @@ namespace restaurant_manager
 
         public void xuat()
         {
-            Console.WriteLine("ma mon an: ", maMonAn);
-            Console.WriteLine("ten mon an: ", tenMonAn);
-            Console.WriteLine("gia mon an: ", giaMonAn);
+            Console.WriteLine("ma mon an: "+ maMonAn);
+            Console.WriteLine("loai mon an: "+ loaiMon);
+            Console.WriteLine("ten mon an: "+ tenMonAn);
+            Console.WriteLine("gia mon an: "+ giaMonAn);
         }
-
+        public void xuat(eLoaiMon loai)
+        {
+            if(loaiMon == loai)
+            {
+                Console.WriteLine("ma mon an: "+ maMonAn);
+                Console.WriteLine("ten mon an: "+ tenMonAn);
+                Console.WriteLine("gia mon an: "+ giaMonAn);
+            }
+        }
 
     }
 }

@@ -9,10 +9,9 @@ namespace restaurant_manager
     class Program
     {
         static void Main(string[] args)
-        {
-            ThucUong a = new ThucUong();
-            a.nhap();
-            a.xuat();
+        {   
+            Menu.nhap();
+            Menu.xuat();
             Console.ReadKey();
         }
     }
