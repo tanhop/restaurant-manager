@@ -6,45 +6,31 @@ using System.Threading.Tasks;
 
 namespace restaurant_manager
 {
-    class Quanli:NhanVien
+    static class Quanli
     {
-        private double sPhucap;
+        private static List<Daubep> Daubep;
+        private static List<Phucvu> Phucvu;
+        private static List<NVketoan> Ketoan;
+        private static List<NVtieptan> Tieptan;
+        static string NameNhaHang;
 
-        public double Phucap { get => sPhucap; set => sPhucap = value; }
+        public static List<Daubep> ListDauBep { get => Daubep; set => Daubep = value; }
+        public static List<Phucvu> ListPhucvu { get => Phucvu; set => Phucvu = value; }
+        public static List<NVketoan> ListKeToan { get => Ketoan; set => Ketoan = value; }
+        public static List<NVtieptan> ListTieptan { get => Tieptan; set => Tieptan = value; }
+       
 
-        public Quanli()
+        public static void nhap()
         {
+            Daubep = new List<Daubep>();
+            Phucvu = new List<Phucvu>();
+            Ketoan = new List<NVketoan>();
+            Tieptan = new List<NVtieptan>();
 
-        }
-        public Quanli(int SoNgayTangCa, double Phucap)
-        {
-            this.sTangca = SoNgayTangCa;
-            this.sPhucap = Phucap;
-        }
-        public Quanli(int SoNgayTangCa)
-        {
-            this.sTangca = SoNgayTangCa;
-            
-        }
-        ~Quanli()
-        {
-
-        }
-
-        public override void nhap()
-        {
-            Console.Write("Ten quanli :");
-            this.sname = Console.ReadLine();
-            Console.Write("So ngay tang ca: ");
-            this.sTangca = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Phu cap: ");
-            this.sPhucap = Convert.ToInt32(Console.ReadLine());
-
-        }
-        public override void xuat()
-        {
-            Console.Write("Ten quan li: " + sname);
-            base.xuat();
+            Console.WriteLine("Nhap ten nha hang: ");
+            NameNhaHang = Console.ReadLine();
+            Console.Write("Nhap so luong dau bep: ");
+            int soDB=
         }
     }
 }

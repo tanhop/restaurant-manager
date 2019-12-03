@@ -48,6 +48,8 @@
     <Compile Include="MonAn.cs" />
     <Compile Include="nhanVien\Daubep.cs" />
     <Compile Include="nhanVien\NhanVien.cs" />
+    <Compile Include="nhanVien\NVketoan.cs" />
+    <Compile Include="nhanVien\NVtieptan.cs" />
     <Compile Include="nhanVien\Phucvu.cs" />
     <Compile Include="nhanVien\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

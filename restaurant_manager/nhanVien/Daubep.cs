@@ -8,14 +8,22 @@ namespace restaurant_manager
 {
     class Daubep:NhanVien
     {
-       
 
-        
+
+        private double sPhucap;
+
+        public double Phucap { get => sPhucap; set => sPhucap = value; }
 
         public Daubep()
         {
 
         }
+        public Daubep(int SoNgayTangCa, double Phucap)
+        {
+            this.sTangca = SoNgayTangCa;
+            this.sPhucap = Phucap;
+        }
+
         public Daubep(int SoNgayTangCa)
         {
             this.sTangca = SoNgayTangCa;
@@ -31,6 +39,8 @@ namespace restaurant_manager
             this.sname = Console.ReadLine();
             Console.Write("So ngay tang ca: ");
             this.sTangca = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Phu cap: ");
+            this.sPhucap = Convert.ToInt32(Console.ReadLine());
 
         }
         public override void xuat()
