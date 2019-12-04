@@ -16,7 +16,13 @@ namespace restaurant_manager
             Menu.docDataThucUong();
             Menu.docDataMonAn();
             QLKinhDoanh.khoiTao();
-            QLKinhDoanh.xuat();
+
+
+            
+
+
+
+
             Console.ReadKey();
         }
        

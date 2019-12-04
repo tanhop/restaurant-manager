@@ -10,13 +10,15 @@ namespace restaurant_manager
     static class QLKinhDoanh
     {
         private static List<BanAn> lBanAn;
+        private static List<Order> lOrder;
         private static int soKhach;
         private static long tongThu;
         private static double doanhThuTB;
-        public static List<BanAn> banAn { get => lBanAn; set => lBanAn = value; }
+        public static List<BanAn> dsBanAn { get => lBanAn; set => lBanAn = value; }
         public static int luongKhach { get => soKhach; set => soKhach = value; }
         public static long TongDoanhThu { get => tongThu; set => tongThu = value; }
         public static double thuTB { get => doanhThuTB; set => doanhThuTB = value; }
+        public static List<Order> dsOrder { get => lOrder; set => lOrder = value; }
 
         public static void khoiTao()
         {
@@ -24,6 +26,7 @@ namespace restaurant_manager
             tongThu = 0;
             doanhThuTB = 0;
             lBanAn = new List<BanAn>();
+            lOrder = new List<Order>();
             for(int i = 0; i < 20; i++)
             {
                 BanAn a = new BanAn();
@@ -32,13 +35,16 @@ namespace restaurant_manager
                 lBanAn.Add(a);
             }
         }
-        public static void xuat()
+        public static void xuatListBan()
         {
             for (int i = 0; i < 20; i++)
                 lBanAn[i].xuat();
+        }
+        public static void xuatDoanhThu()
+        {
             Console.WriteLine("tổng doanh thu: " + tongThu);
             Console.WriteLine("tổng lượng khách: " + soKhach);
-            Console.WriteLine("doanh thu trung bình: " + thuTB + "đ/người");
+            Console.WriteLine("doanh thu trung bình: " + thuTB + " đ/người");
         }
         public static void datMon()
         {
@@ -74,6 +80,8 @@ namespace restaurant_manager
             Console.WriteLine("nhập bàn đã tính tiền: ");
             int ban = Convert.ToInt32(Console.ReadLine());
             lBanAn[ban-1].daTinhTien();
+
+            lOrder.Add(lBanAn[ban - 1].donhang);
             soKhach += lBanAn[ban - 1].donhang.nguoi;
             tongThu += lBanAn[ban - 1].donhang.tinhTien();
             thuTB = tongThu / soKhach;
