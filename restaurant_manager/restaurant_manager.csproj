@@ -59,6 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="nhanVien\Quanli.cs" />
     <Compile Include="menu related\ThucUong.cs" />
+    <Compile Include="QLKinhDoanh.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

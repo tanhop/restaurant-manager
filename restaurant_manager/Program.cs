@@ -15,14 +15,8 @@ namespace restaurant_manager
             Console.InputEncoding = Encoding.Unicode;
             Menu.docDataThucUong();
             Menu.docDataMonAn();
-            BanAn a = new BanAn();
-            a.stt = status.trống;
-            a.so = 1;
-            a.datMon();
-            a.xuat();
-            a.xuatHoaDon();
-            a.daTinhTien();
-            a.xuat();
+            QLKinhDoanh.khoiTao();
+            QLKinhDoanh.xuat();
             Console.ReadKey();
         }
        

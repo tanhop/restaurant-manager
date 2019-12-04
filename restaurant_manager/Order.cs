@@ -10,13 +10,13 @@ namespace restaurant_manager
     {
         private List<MonAn> lMon;
         private List<ThucUong> lNuoc;
-        private double giaTien;
+        private long giaTien;
         private int soNguoi;
 
         public int nguoi { get => soNguoi; set => soNguoi = value; }
         public List<MonAn> mon { get => lMon; set => lMon = value; }
         public List<ThucUong> nuoc { get => lNuoc; set => lNuoc = value; }
-        public double tien { get => giaTien; set => giaTien = value; }
+        public long tien { get => giaTien; set => giaTien = value; }
 
         public Order()
         {
@@ -64,9 +64,9 @@ namespace restaurant_manager
                 lNuoc.Add(b);
             }
         }
-        public double tinhTien()
+        public long tinhTien()
         {
-            double tien = 0;
+            long tien = 0;
             for (int i = 0; i < lMon.Count; i++)
                 tien += lMon[i].Gia * lMon[i].luong;
             for (int i = 0; i < lNuoc.Count; i++)
