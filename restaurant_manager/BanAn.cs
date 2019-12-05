@@ -14,7 +14,7 @@ namespace restaurant_manager
         private Order donHang;
 
     
-        public int so { get => so; set => soBan = value; }
+        public int so { get => soBan; set => soBan = value; }
         public status stt { get => trangThai; set => trangThai = value; }
         public Order donhang { get => donHang; set => donHang = value; }
 

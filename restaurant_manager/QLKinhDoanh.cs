@@ -67,7 +67,7 @@ namespace restaurant_manager
                     Console.WriteLine(lBanAn[i].so);
             }
             Console.WriteLine("nhập bàn muốn xuất hóa đơn: ");
-            lBanAn[Convert.ToInt32(Console.ReadLine())].xuatHoaDon();
+            lBanAn[Convert.ToInt32(Console.ReadLine())-1].xuatHoaDon();
         }
         public static void daTinhTien()
         {
@@ -85,6 +85,12 @@ namespace restaurant_manager
             soKhach += lBanAn[ban - 1].donhang.nguoi;
             tongThu += lBanAn[ban - 1].donhang.tinhTien();
             thuTB = tongThu / soKhach;
+        }   
+        public static void xuatDSHoaDon()
+        {
+            Console.WriteLine("danh sách tất cả hóa đơn");
+            foreach (Order hoaDon in lOrder)
+                hoaDon.xuat();
         }
     }
 }
