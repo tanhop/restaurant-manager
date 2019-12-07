@@ -31,16 +31,16 @@ namespace restaurant_manager
 
         public void nhap()
         {
-            Console.WriteLine("nhap ma mon an: ");
+            Console.WriteLine("nhập mã món ăn: ");
             maMonAn = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("nhap loai mon an: ");
+            Console.WriteLine("nhập loại món ăn: ");
             var demLoaiMon = Enum.GetNames(typeof(eLoaiMon)).Length;
             for (int i = 0; i < demLoaiMon; i++)
                 Console.WriteLine(i + "/ " + Enum.GetName(typeof(eLoaiMon), i));
             loaiMon = (eLoaiMon)Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("nhap ten mon an: ");
+            Console.WriteLine("nhập tên món ăn: ");
             tenMonAn = Console.ReadLine();
-            Console.WriteLine("nhap gia mon an: ");
+            Console.WriteLine("nhập giá món ăn: ");
             giaMonAn = Convert.ToInt64(Console.ReadLine());
         }
 

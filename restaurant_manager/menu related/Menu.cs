@@ -73,5 +73,52 @@ namespace restaurant_manager
             }
             sr.Close();
         }
+
+        public static void them()
+        {
+            Console.WriteLine("1. thêm món ăn");
+            Console.WriteLine("2. thêm thức uống");
+            int n = int.Parse(Console.ReadLine());
+            if (n == 1)
+            {
+                MonAn a = new MonAn();
+                a.nhap();
+                Menu.lMonAn.Add(a);
+            }
+            if (n == 2)
+            {
+                ThucUong b = new ThucUong();
+                b.nhap();
+                Menu.lThucUong.Add(b);
+            }
+        }
+
+        public static void xoa()
+        {
+            Console.WriteLine("1. xóa món ăn");
+            Console.WriteLine("2. xóa thức uống");
+            int n = int.Parse(Console.ReadLine());
+            if (n == 1)
+            {
+                Console.WriteLine("nhập mã món cần xóa: ");
+                int idMon = int.Parse(Console.ReadLine());
+                var mon = Menu.lMonAn.SingleOrDefault(x => x.iMa == idMon);
+                if (mon != null)
+                    Menu.lMonAn.Remove(mon);
+                else
+                    Console.WriteLine("Không có món có mã số này");
+            }
+            if (n == 2)
+            {
+                Console.WriteLine("nhập mã thức uống cần xóa: ");
+                int idThucUong = int.Parse(Console.ReadLine());
+                var thucUong = Menu.lThucUong.SingleOrDefault(x => x.iMa == idThucUong);
+                if (thucUong != null)
+                    Menu.lThucUong.Remove(thucUong);
+                else
+                    Console.WriteLine("Không có thức uống có mã số này");
+            }
+
+        }
     }
 }
