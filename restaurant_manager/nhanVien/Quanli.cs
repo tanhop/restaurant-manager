@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace restaurant_manager
 {
@@ -12,57 +13,330 @@ namespace restaurant_manager
         private static List<Phucvu> Phucvu;
         private static List<NVketoan> Ketoan;
         private static List<NVtieptan> Tieptan;
-        static string NameNhaHang;
+        private static List<NhanVien> nhanviens;
+        private static string NameNhaHang;
 
         public static List<Daubep> ListDauBep { get => Daubep; set => Daubep = value; }
         public static List<Phucvu> ListPhucvu { get => Phucvu; set => Phucvu = value; }
         public static List<NVketoan> ListKeToan { get => Ketoan; set => Ketoan = value; }
         public static List<NVtieptan> ListTieptan { get => Tieptan; set => Tieptan = value; }
-       
+        public static List<NhanVien> ListNhanvien { get => nhanviens; set => nhanviens = value; }
 
-        public static void nhap()
+        
+                     
+        
+        public static void xuat()
+        {
+            Console.Write("Name nhà hàng: HH Restaurant ");
+            Console.WriteLine("\n----------------------------\n");
+
+            Console.WriteLine("===== List Đầu bếp =====\n \n");
+            {
+                foreach (var x in Daubep)
+                    x.xuat();
+            }
+            Console.WriteLine("\n \n");
+            Console.WriteLine("===== List NV kế toán =====\n \n");
+            {
+                foreach (var x in Ketoan)
+                    x.xuat();
+            }
+            Console.WriteLine("\n \n");
+            Console.WriteLine("===== List NV tiếp tân =====\n \n");
+            {
+                foreach (var x in Tieptan)
+                    x.xuat();
+            }
+            Console.WriteLine("\n \n");
+            Console.WriteLine("===== List NV Phục vụ =====\n \n");
+            {
+                foreach (var x in Phucvu)
+                    x.xuat();            
+            }
+        }
+        public static void KhoiTaoListNV()
         {
             Daubep = new List<Daubep>();
             Phucvu = new List<Phucvu>();
             Ketoan = new List<NVketoan>();
             Tieptan = new List<NVtieptan>();
+            
 
-            Console.WriteLine("Nhap ten nha hang: ");
-            NameNhaHang = Console.ReadLine();
-            Console.Write("Nhap so luong dau bep: ");
-            int soDB = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Nhap so luong ke toan: ");
-            int soKT = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Nhap so luong tiep tan: ");
-            int soTT = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Nhap so luong phuc vu: ");
-            int soPV = Convert.ToInt32(Console.ReadLine());
+            // tao dau bep
+            Daubep db1 = new Daubep();
+            db1.Nvname = "Nguyen Van A";
+            db1.Day = "1990";
+            db1.DayNghi = 0;
+            db1.SoNgayTangCa = 2;
+            db1.Luongcoban = 8000000;
+            Daubep.Add(db1);
 
-            for( int i =0; i< soDB; i++)
-            {
-                Daubep db = new Daubep();
-                db.nhap();
-                Daubep.Add(db);
-            }
-            for (int i = 0; i < soKT; i++)
-            {
-                NVketoan kt = new NVketoan();
-                kt.nhap();
-                Ketoan.Add(kt);
-            }
-            for (int i = 0; i < soTT; i++)
-            {
-                NVtieptan tt = new NVtieptan();
-                tt.nhap();
-                Tieptan.Add(tt);
-            }
-            for (int i = 0; i < soPV; i++)
-            {
-                Phucvu pv = new Phucvu();
-                pv.nhap();
-                Phucvu.Add(pv);
-            }
+            Daubep db2 = new Daubep();
+            db2.Nvname = "Nguyen Van B";
+            db2.Day = "1991";
+            db2.DayNghi = 0;
+            db2.SoNgayTangCa = 3;
+            db2.Luongcoban = 8000000;
+            Daubep.Add(db2);
+
+            Daubep db3 = new Daubep();
+            db3.Nvname = "Nguyen Van C";
+            db3.Day = "1990";
+            db3.DayNghi = 0;
+            db3.SoNgayTangCa = 1;
+            db3.Luongcoban = 7000000;
+            Daubep.Add(db3);
+
+            Daubep db4 = new Daubep();
+            db4.Nvname = "Nguyen Van D";
+            db4.Day = "1988";
+            db4.DayNghi = 0;
+            db4.SoNgayTangCa = 3;
+            db4.Luongcoban = 9000000;
+            Daubep.Add(db4);
+
+            Daubep db5 = new Daubep();
+            db5.Nvname = "Nguyen Van H";
+            db5.Day = "1985";
+            db5.DayNghi = 1;
+            db5.SoNgayTangCa = 4;
+            db5.Luongcoban = 13000000;
+            Daubep.Add(db5);
+            
+            //tao ke toan
+
+            NVketoan kt1 = new NVketoan();
+            kt1.Nvname = "Nguyen Thi A";
+            kt1.Day = "1995";
+            kt1.DayNghi = 0;
+            kt1.SoNgayTangCa = 1;
+            kt1.Luongcoban = 7000000;
+            Ketoan.Add(kt1);
+
+            NVketoan kt2 = new NVketoan();
+            kt2.Nvname = "Nguyen Thi B";
+            kt2.Day = "1993";
+            kt2.DayNghi = 0;
+            kt2.SoNgayTangCa = 3;
+            kt2.Luongcoban = 9000000;
+            Ketoan.Add(kt2);
+
+            NVketoan kt3 = new NVketoan();
+            kt3.Nvname = "Nguyen Thi C";
+            kt3.Day = "1990";
+            kt3.DayNghi = 1;
+            kt3.SoNgayTangCa = 1;
+            kt3.Luongcoban = 8000000;
+            Ketoan.Add(kt3);
+
+            //tao tiep tan
+
+            NVtieptan tt1 = new NVtieptan();
+            tt1.Nvname = "Nguyễn Thành A";
+            tt1.Day = "1998";
+            tt1.DayNghi = 0;
+            tt1.SoNgayTangCa = 2;
+            tt1.Luongcoban = 7000000;
+            Tieptan.Add(tt1);
+
+            NVtieptan tt2 = new NVtieptan();
+            tt2.Nvname = "Nguyễn Thành B";
+            tt2.Day = "1997";
+            tt2.DayNghi = 1;
+            tt2.SoNgayTangCa = 3;
+            tt2.Luongcoban = 8000000;
+            Tieptan.Add(tt2);
+
+            NVtieptan tt3 = new NVtieptan();
+            tt3.Nvname = "Nguyễn Thành C";
+            tt3.Day = "1993";
+            tt3.DayNghi = 0;
+            tt3.SoNgayTangCa = 3;
+            tt3.Luongcoban = 9000000;
+            Tieptan.Add(tt3);
+
+            NVtieptan tt4 = new NVtieptan();
+            tt4.Nvname = "Nguyễn Thành D";
+            tt4.Day = "2000";
+            tt4.DayNghi = 0;
+            tt4.SoNgayTangCa = 2;
+            tt4.Luongcoban = 7000000;
+            Tieptan.Add(tt4);
+
+            // tao phuc vu
+
+            Phucvu pv1 = new Phucvu();
+            pv1.Nvname = "Phạm Văn A";
+            pv1.Day = "2000";
+            pv1.DayNghi = 0;
+            pv1.SoNgayTangCa = 2;
+            pv1.Luongcoban = 6000000;
+            Phucvu.Add(pv1);
+
+
+            Phucvu pv2 = new Phucvu();
+            pv2.Nvname = "Phạm Văn B";
+            pv2.Day = "1999";
+            pv2.DayNghi = 0;
+            pv2.SoNgayTangCa = 2;
+            pv2.Luongcoban = 6500000;
+            Phucvu.Add(pv2);
+
+            Phucvu pv3 = new Phucvu();
+            pv3.Nvname = "Phạm Văn C";
+            pv3.Day = "1997";
+            pv3.DayNghi = 1;
+            pv3.SoNgayTangCa = 1;
+            pv3.Luongcoban = 7000000;
+            Phucvu.Add(pv3);
+
+            Phucvu pv4 = new Phucvu();
+            pv4.Nvname = "Phạm Văn D";
+            pv4.Day = "1994";
+            pv4.DayNghi = 2;
+            pv4.SoNgayTangCa = 4;
+            pv4.Luongcoban = 6300000;
+            Phucvu.Add(pv4);
+
+            Phucvu pv5 = new Phucvu();
+            pv5.Nvname = "Phạm Văn H";
+            pv5.Day = "2001";
+            pv5.DayNghi = 0;
+            pv5.SoNgayTangCa = 2;
+            pv5.Luongcoban = 6500000;
+            Phucvu.Add(pv5);
 
         }
+        public static  void AddListNV()
+        {
+            nhanviens = new List<NhanVien>();
+            foreach (var man in Daubep)
+            {
+                nhanviens.Add(man);
+            }
+            foreach (var man in Phucvu)
+            {
+                nhanviens.Add(man);
+            }
+            foreach (var man in Ketoan)
+            {
+                nhanviens.Add(man);
+            }
+            foreach (var man in Tieptan)
+            {
+                nhanviens.Add(man);
+            }
+        }
+
+        public static void Findmax()
+        {
+            NhanVien max = new Daubep();
+            max = nhanviens[0];
+            for (int i = 1; i < nhanviens.Count; i++)
+            {
+                if (nhanviens[i].LuongNV() > max.LuongNV())
+                    max = nhanviens[i];
+            }
+            Console.WriteLine("\n \n ------------------ \n \n");
+            Console.WriteLine("NV luong cao nhat : ");
+            max.xuat();
+        }
+
+        public static void xuatNV()
+        {
+            Console.WriteLine("\n \n ------------------ \n \n");
+            Console.WriteLine("Ten cong ty: HH restaurant") ;
+            Console.WriteLine("Danh sach nhan vien: ");
+            foreach (var man in nhanviens)
+                man.xuat();
+        }
+        public static void sapxep()
+        {
+            for (int i = 0; i < nhanviens.Count; i++)
+                for (int j = i+1; j < nhanviens.Count; j++)
+                {
+                    if (nhanviens[i].LuongNV() < nhanviens[j].LuongNV())
+                    {
+                        NhanVien temp = new Daubep();
+                        temp = nhanviens[i];
+                        nhanviens[i] = nhanviens[j];
+                        nhanviens[j] = temp;
+                    }
+                }
+        }
+
+        /*
+        }
+        public static void docDataDauBep()       //doc data tu file daubep.txt
+        {
+            Daubep = new List<Daubep>();
+            StreamReader sr = new StreamReader("daubep.txt");
+            string line;
+            while ((line = sr.ReadLine()) != null)
+            {
+                Daubep a = new Daubep();
+                a.sTenDauBep = sr.ReadLine();
+                a.sTuoiDaubep = sr.ReadLine();
+                a.sDayNghi = Convert.ToInt32(sr.ReadLine());
+                a.sDayTangca = Convert.ToInt32(sr.ReadLine());
+                a.sLuongDB = Convert.ToInt64(sr.ReadLine());
+                Daubep.Add(a);
+            }
+            sr.Close();
+        }
+
+        public static void docDataNVKetoan()       //doc data tu file ketoan.txt
+        {
+            Ketoan = new List<NVketoan>();
+            StreamReader sr = new StreamReader("ketoan.txt");
+            string line;
+            while ((line = sr.ReadLine()) != null)
+            {
+                NVketoan a = new NVketoan();
+                a.sTenKT = sr.ReadLine();
+                a.sTuoiKT = sr.ReadLine();
+                a.sDayNghi = Convert.ToInt32(sr.ReadLine());
+                a.sDayTangca = Convert.ToInt32(sr.ReadLine());
+                a.sLuongKT = Convert.ToInt64(sr.ReadLine());
+                Ketoan.Add(a);
+            }
+            sr.Close();
+        }
+        public static void docDataNVtieptan()       //doc data tu file tieptan.txt
+        {
+            Tieptan = new List<NVtieptan>();
+            StreamReader sr = new StreamReader("tieptan.txt");
+            string line;
+            while ((line = sr.ReadLine()) != null)
+            {
+                NVtieptan a = new NVtieptan();
+                a.sTenTieptan = sr.ReadLine();
+                a.sTuoiTieptan = sr.ReadLine();
+                a.sDayNghi = Convert.ToInt32(sr.ReadLine());
+                a.sDayTangca = Convert.ToInt32(sr.ReadLine());
+                a.sLuongTT = Convert.ToInt64(sr.ReadLine());
+
+                Tieptan.Add(a);
+            }
+            sr.Close();
+        }
+        public static void docDataPhucvu()       //doc data tu file phucvu.txt
+        {
+            Phucvu = new List<Phucvu>();
+            StreamReader sr = new StreamReader("daubep.txt");
+            string line;
+            while ((line = sr.ReadLine()) != null)
+            {
+                Phucvu a = new Phucvu();
+                a.sTenPhucvu = sr.ReadLine();
+                a.sTuoiPhucvu = sr.ReadLine();
+                a.sDayNghi = Convert.ToInt32(sr.ReadLine());
+                a.sDayTangca = Convert.ToInt32(sr.ReadLine());
+                a.sLuongPV = Convert.ToInt64(sr.ReadLine());
+                Phucvu.Add(a);
+            }
+            sr.Close();
+        }
+        */
     }
 }

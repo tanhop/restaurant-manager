@@ -65,12 +65,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="daubep.txt" />
+    <Content Include="ketoan.txt" />
     <Content Include="MonAn.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="phucvu.txt" />
     <Content Include="ThucUong.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="tieptan.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Other\" />
