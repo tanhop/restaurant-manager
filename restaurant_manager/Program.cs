@@ -7,19 +7,22 @@ using System.IO;
 
 namespace restaurant_manager
 {
+    
     class Program
     {
-            static void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
             Menu.docDataThucUong();
             Menu.docDataMonAn();
             QLKinhDoanh.khoiTao();
+            Quanli.KhoiTaoListNV();
 
             int a = 10;
             int b = 10;
             int c = 10;
+
 
             while (a != 0)
             {
@@ -135,6 +138,107 @@ namespace restaurant_manager
                                     Console.ReadKey();
                                     break;                                 
                             }
+                        }
+                        Console.Clear();
+                        break;
+                    case 3:
+                        b = 10;
+                        while (b != 0)
+                        {
+                            a = 10;
+                            b = 10;
+                            Console.Clear();
+                            Console.WriteLine("0. Quay lại màn hình quản lý");
+                            Console.WriteLine("1. Xuất danh sách nhân viên");
+                            Console.WriteLine("2. Thêm, xóa nhân viên");
+                            Console.WriteLine("3. So sánh lương");
+                            b = int.Parse(Console.ReadLine());
+                            switch(b)
+                            {
+                                case 1:
+                                    Console.Clear();
+                                    Quanli.xuatNV();
+                                    Console.WriteLine("Press any key to exit");
+                                    Console.ReadKey();
+                                    break;
+                                case 2:
+                                    c = 10;
+                                    Console.Clear();
+                                    Console.WriteLine("0. Quay lại");
+                                    Console.WriteLine("1. Thêm nhân viên");
+                                    Console.WriteLine("2. Xóa nhân viên");
+                                    c = Convert.ToInt32(Console.ReadLine());
+                                    while (c != 0)
+                                    {
+                                        Console.Clear();
+                                        switch (c)
+                                        {
+                                            case 1:
+                                                Console.Clear();
+                                                Console.WriteLine("0. Quay lại");
+                                                Console.WriteLine("1. Thêm đầu bếp");
+                                                Console.WriteLine("2. Thêm kế toán");
+                                                Console.WriteLine("3. Thêm tiếp tân");
+                                                Console.WriteLine("4. Thêm phục vụ");
+                                                int d = int.Parse(Console.ReadLine());
+                                                while (d != 0)
+                                                {
+                                                    switch (d)
+                                                    {
+                                                        case 1:
+                                                            NhanVien db = new Daubep();
+                                                            db.nhap();
+                                                            Quanli.ListNhanvien.Add(db);
+                                                            Console.WriteLine("Press any key to exit");
+                                                            Console.ReadKey();
+                                                            break;
+
+                                                        case 2:
+                                                            NhanVien kt = new NVketoan();
+                                                            kt.nhap();
+                                                            Quanli.ListNhanvien.Add(kt);
+                                                            Console.WriteLine("Press any key to exit");
+                                                            Console.ReadKey();
+                                                            break;
+
+                                                        case 3:
+                                                    
+                                                            NhanVien tt = new NVtieptan();
+                                                            tt.nhap();
+                                                            Quanli.ListNhanvien.Add(tt);
+                                                            Console.WriteLine("Press any key to exit");
+                                                            Console.ReadKey();
+                                                            break;
+
+                                                        case 4:
+                                                    
+                                                            NhanVien pv = new Phucvu();
+                                                            pv.nhap();
+                                                            Quanli.ListNhanvien.Add(pv);
+                                                            Console.WriteLine("Press any key to exit");
+                                                            Console.ReadKey();
+                                                            break;
+                                                    }
+                                                }
+                                                break;
+                                            case 2:
+                                                Console.Clear();
+                                                Quanli.xoaNV();
+                                                Console.WriteLine("Press any key to exit");
+                                                Console.ReadKey();
+                                                c = 0;
+                                                break;
+                                        }
+                                    }
+                                    break;
+                                case 3:
+                                    Console.Clear();
+                                    Quanli.soSanhLuong();
+                                    Console.WriteLine("Press any key to exit");
+                                    Console.ReadLine();
+                                    break;
+                            }
+
                         }
                         Console.Clear();
                         break;

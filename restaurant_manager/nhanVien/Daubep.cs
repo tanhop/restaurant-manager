@@ -8,23 +8,10 @@ namespace restaurant_manager
 {
     class Daubep:NhanVien
     {
-        private string sname;
-        private string sNamsinh;
-        private int sDayNghi;
-        private int sTangca;
-        private double sLuong;
-       
-       
-
-       
-        public string Nvname { get => sname; set => sname = value; }
-        public string Day { get => sNamsinh; set => sNamsinh = value; }
-        public int DayNghi { get => sDayNghi; set => sDayNghi = value; }
-        public int SoNgayTangCa { get => sTangca; set => sTangca = value; }
-        public double Luongcoban { get => sLuong; set => sLuong = value; }
-
-
-        public Daubep() { }
+        
+        public Daubep() 
+        {
+        }
         public Daubep(string sNvname, string sDay, int sDayNghi, int sSoNgayTangCa, long sLuongcoban)
         {
             Nvname =sNvname;
@@ -36,17 +23,19 @@ namespace restaurant_manager
         }
         
         public override void nhap()
-        { /*
+        {
+            Console.WriteLine("nhập mã đầu bếp: ");
+            this.sMaNV = Console.ReadLine();
             Console.Write("Tên đầu bếp : ");
-            this.tenDaubep = Console.ReadLine();
-            Console.Write("Tuổi đầu bếp: ");
-            this.tuoiDaubep = Console.ReadLine();
+            this.sname = Console.ReadLine();
+            Console.Write("Năm sinh: ");
+            this.sNamsinh = Console.ReadLine();
             Console.Write("Số ngày nghỉ : ");
-            this.soNgayNghi = Convert.ToInt32(Console.ReadLine());
+            this.sDayNghi = Convert.ToInt32(Console.ReadLine());
             Console.Write("Số ngày tăng ca : ");
-            this.soNgayTangca = Convert.ToInt32(Console.ReadLine());
+            this.sTangca = Convert.ToInt32(Console.ReadLine());
             Console.Write("Lương : ");
-            this.luongDaubep= Convert.ToInt32(Console.ReadLine());  */
+            this.sLuong= Convert.ToDouble(Console.ReadLine());  
         }
 
         public override double LuongNV()
@@ -56,12 +45,13 @@ namespace restaurant_manager
 
         public override void xuat()
         {
-            
+            Console.WriteLine("mã số đầu bếp: " +this.sMaNV);
             Console.WriteLine("Tên đầu bếp : "+ this.sname);
-            Console.WriteLine("Tuổi : "+ this.sNamsinh);
+            Console.WriteLine("Năm sinh : "+ this.sNamsinh);
             Console.WriteLine("Số ngày nghỉ : " + this.sDayNghi);
             Console.WriteLine("Số ngày tăng ca: " + this.sTangca);
             Console.WriteLine("Lương : " + this.sLuong);
         }
+ 
     }
 }

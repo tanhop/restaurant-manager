@@ -9,23 +9,7 @@ namespace restaurant_manager
     class NVketoan:NhanVien
     {
 
-
-        private string sname;
-        private string sNamsinh;
-        private int sDayNghi;
-        private int sTangca;
-        private double sLuong;
-
-
-
-
-        public string Nvname { get => sname; set => sname = value; }
-        public string Day { get => sNamsinh; set => sNamsinh = value; }
-        public int DayNghi { get => sDayNghi; set => sDayNghi = value; }
-        public int SoNgayTangCa { get => sTangca; set => sTangca = value; }
-        public double Luongcoban { get => sLuong; set => sLuong = value; }
-
-
+        
         public NVketoan() { }
         public NVketoan(string sNvname, string sDay, int sDayNghi, int sSoNgayTangCa, long sLuongcoban)
         {
@@ -38,17 +22,19 @@ namespace restaurant_manager
         }
 
         public override void nhap()
-        { /*
+        {
+            Console.WriteLine("nhập mã kế toán: ");
+            this.sMaNV = Console.ReadLine();
             Console.Write("Tên Kế toán : ");
-            this.tenKetoan = Console.ReadLine();
+            this.sname = Console.ReadLine();
             Console.Write("Tuổi Kế toán: ");
-            this.tuoiKetoan = Console.ReadLine();
+            this.sNamsinh = Console.ReadLine();
             Console.Write("Số ngày nghỉ : ");
-            this.soNgayNghi = Convert.ToInt32(Console.ReadLine());
+            this.sDayNghi = Convert.ToInt32(Console.ReadLine());
             Console.Write("Số ngày tăng ca : ");
-            this.soNgayTangca = Convert.ToInt32(Console.ReadLine());
+            this.sTangca = Convert.ToInt32(Console.ReadLine());
             Console.Write("Lương : ");
-            this.luongKetoan = Convert.ToInt32(Console.ReadLine());              */
+            this.sLuong = Convert.ToDouble(Console.ReadLine());              
         }
         public override double LuongNV()
         {
@@ -57,8 +43,9 @@ namespace restaurant_manager
 
         public override void xuat()
         {
+            Console.WriteLine("mã số kế toán: " + this.sMaNV);
             Console.WriteLine("Tên kế toán: " + sname);
-            Console.WriteLine("Tuổi : " + sNamsinh);
+            Console.WriteLine("Năm sinh : " + sNamsinh);
             Console.WriteLine("Số ngày nghỉ : " + sDayNghi);
             Console.WriteLine("Số ngày tăng ca: " + sTangca);
             Console.WriteLine("Lương : " + sLuong);
