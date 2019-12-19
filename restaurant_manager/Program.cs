@@ -22,7 +22,7 @@ namespace restaurant_manager
             int a = 10;
             int b = 10;
             int c = 10;
-
+            int d = 10;
 
             while (a != 0)
             {
@@ -162,27 +162,28 @@ namespace restaurant_manager
                                     Console.ReadKey();
                                     break;
                                 case 2:
-                                    c = 10;
+                                    while (c != 0)
+                                    {
+                                        c = 10;
                                     Console.Clear();
                                     Console.WriteLine("0. Quay lại");
                                     Console.WriteLine("1. Thêm nhân viên");
                                     Console.WriteLine("2. Xóa nhân viên");
                                     c = Convert.ToInt32(Console.ReadLine());
-                                    while (c != 0)
-                                    {
                                         Console.Clear();
                                         switch (c)
                                         {
                                             case 1:
-                                                Console.Clear();
-                                                Console.WriteLine("0. Quay lại");
-                                                Console.WriteLine("1. Thêm đầu bếp");
-                                                Console.WriteLine("2. Thêm kế toán");
-                                                Console.WriteLine("3. Thêm tiếp tân");
-                                                Console.WriteLine("4. Thêm phục vụ");
-                                                int d = int.Parse(Console.ReadLine());
                                                 while (d != 0)
                                                 {
+                                                    d = 10;
+                                                    Console.Clear();
+                                                    Console.WriteLine("0. Quay lại");
+                                                    Console.WriteLine("1. Thêm đầu bếp");
+                                                    Console.WriteLine("2. Thêm kế toán");
+                                                    Console.WriteLine("3. Thêm tiếp tân");
+                                                    Console.WriteLine("4. Thêm phục vụ");
+                                                    d = int.Parse(Console.ReadLine());
                                                     switch (d)
                                                     {
                                                         case 1:
@@ -202,7 +203,7 @@ namespace restaurant_manager
                                                             break;
 
                                                         case 3:
-                                                    
+
                                                             NhanVien tt = new NVtieptan();
                                                             tt.nhap();
                                                             Quanli.ListNhanvien.Add(tt);
@@ -211,7 +212,7 @@ namespace restaurant_manager
                                                             break;
 
                                                         case 4:
-                                                    
+
                                                             NhanVien pv = new Phucvu();
                                                             pv.nhap();
                                                             Quanli.ListNhanvien.Add(pv);
@@ -219,6 +220,7 @@ namespace restaurant_manager
                                                             Console.ReadKey();
                                                             break;
                                                     }
+                                                    break;
                                                 }
                                                 break;
                                             case 2:
